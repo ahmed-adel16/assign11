@@ -32,6 +32,8 @@
                                 <img src="{{ $product->image_path }}" class="card-img-top" alt="Product Image">
                                 <div class="card-body">
                                     <h5 class="card-title">{{ $product->name }}</h5>
+                                    <p class="card-text"><strong>Brand:</strong> {{ $product->brand->name ?? 'N/A' }}</p>
+
                                     <p class="card-text" style = 'min-height:70px;'>{{ $product->description }}</p>
                                     <p class="card-text"><strong>${{ $product->price }}</strong></p>
                                     <a href="{{ route('products.show', $product->id) }}" class="btn btn-primary">See More</a>
